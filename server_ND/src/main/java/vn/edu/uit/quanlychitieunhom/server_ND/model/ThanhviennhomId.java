@@ -8,10 +8,10 @@ import java.util.Objects;
 public class ThanhviennhomId implements Serializable {
 
     @ManyToOne
-    @JoinColumn(name = "tentaikhoan", foreignKey = @ForeignKey(name = "fk_THANHVIENNHOM_TAIKHOAN1"))
+    @JoinColumn(name = "tentaikhoan", foreignKey = @ForeignKey(name = "fk_THANHVIENNHOM_TAIKHOAN_1"))
     private TAIKHOAN taikhoan;
     @ManyToOne
-    @JoinColumn(name = "manhomchitieu", foreignKey = @ForeignKey(name = "fk_THANHVIENNHOM_NHOMCHITIEU1"))
+    @JoinColumn(name = "manhomchitieu", foreignKey = @ForeignKey(name = "fk_THANHVIENNHOM_NHOMCHITIEU_1"))
     private NHOMCHITIEU nhomchitieu;
 
     public TAIKHOAN getTaikhoan() {

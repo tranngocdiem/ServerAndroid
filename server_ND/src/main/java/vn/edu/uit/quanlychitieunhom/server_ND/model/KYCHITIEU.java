@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "KYCHITIEU")
+@Table(name = "kychitieu")
 public class KYCHITIEU implements Serializable {
     @Id
     @GeneratedValue
@@ -20,7 +20,7 @@ public class KYCHITIEU implements Serializable {
     private Float hanmucchitieu;
 
     @ManyToOne
-    @JoinColumn(name = "manhomchitieu", foreignKey = @ForeignKey(name = "fk_KYCHITIEU_NHOMCHITIEU1"))
+    @JoinColumn(name = "manhomchitieu", foreignKey = @ForeignKey(name = "fk_KYCHITIEU_NHOMCHITIEU_1"))
     private NHOMCHITIEU manhomchitieu;
 
     public Integer getMakychitieu() {

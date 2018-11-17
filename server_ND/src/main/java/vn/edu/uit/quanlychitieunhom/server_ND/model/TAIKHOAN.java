@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "TAIKHOAN")
+@Table(name = "taikhoan")
 
 public class TAIKHOAN implements Serializable {
     @Id
@@ -23,8 +23,8 @@ public class TAIKHOAN implements Serializable {
     private String sodienthoai;
     @Column(name = "email")
     private String email;
-    @Column(name = "ngaydangki")
-    private Date ngaydangki;
+    @Column(name = "ngaydangky")
+    private Date ngaydangky;
     @Column(name = "avatar")
     private String avatar;
 
@@ -92,11 +92,11 @@ public class TAIKHOAN implements Serializable {
         this.email = email;
     }
 
-    public Date getNgaydangki() {
-        return ngaydangki;
+    public Date getNgaydangky() {
+        return ngaydangky;
     }
 
-    public void setNgaydangki(Date ngaydangki) {
-        this.ngaydangki = ngaydangki;
+    public void setNgaydangky(Date ngaydangky) {
+        this.ngaydangky = ngaydangky;
     }
 }
