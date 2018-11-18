@@ -17,7 +17,7 @@ public class KYCHITIEU implements Serializable {
     @Column(name = "denngay")
     private Date denngay;
     @Column(name = "hanmucchitieu")
-    private Float hanmucchitieu;
+    private Double hanmucchitieu;
 
     @ManyToOne
     @JoinColumn(name = "manhomchitieu", foreignKey = @ForeignKey(name = "fk_KYCHITIEU_NHOMCHITIEU_1"))
@@ -55,11 +55,11 @@ public class KYCHITIEU implements Serializable {
         this.denngay = denngay;
     }
 
-    public Float getHanmucchitieu() {
+    public Double getHanmucchitieu() {
         return hanmucchitieu;
     }
 
-    public void setHanmucchitieu(Float hanmucchitieu) {
+    public void setHanmucchitieu(Double hanmucchitieu) {
         this.hanmucchitieu = hanmucchitieu;
     }
 

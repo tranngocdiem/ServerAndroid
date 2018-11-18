@@ -15,7 +15,7 @@ public class NHOMCHITIEU implements Serializable {
     private String tennhomchitieu;
 
     @Column(name = "quy")
-    private Float quy;
+    private Double quy;
 
     public Integer getManhomchitieu() {
         return manhomchitieu;
@@ -33,11 +33,11 @@ public class NHOMCHITIEU implements Serializable {
         this.tennhomchitieu = tennhomchitieu;
     }
 
-    public Float getQuy() {
+    public Double getQuy() {
         return quy;
     }
 
-    public void setQuy(Float quy) {
+    public void setQuy(Double quy) {
         this.quy = quy;
     }
 }

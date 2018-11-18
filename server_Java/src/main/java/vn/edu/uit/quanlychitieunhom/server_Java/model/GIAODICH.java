@@ -14,7 +14,7 @@ public class GIAODICH implements Serializable {
     @Column(name = "ngaygiaodich")
     private Date ngaygiaodich;
     @Column(name = "sotien")
-    private Float sotien;
+    private Double sotien;
     @Column(name = "ghichu")
     private String ghichu;
     @Column(name = "anhhoadon")
@@ -51,11 +51,11 @@ public class GIAODICH implements Serializable {
         this.ngaygiaodich = ngaygiaodich;
     }
 
-    public Float getSotien() {
+    public Double getSotien() {
         return sotien;
     }
 
-    public void setSotien(Float sotien) {
+    public void setSotien(Double sotien) {
         this.sotien = sotien;
     }
 
