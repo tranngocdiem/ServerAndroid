@@ -9,7 +9,6 @@ import java.util.Date;
 
 public class TAIKHOAN implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String tentaikhoan;
     @Column(name = "matkhau")
     private String matkhau;

@@ -10,6 +10,13 @@ import java.io.Serializable;
 @Table(name = "thanhviennhom")
 public class THANHVIENNHOM implements Serializable {
     @EmbeddedId
-    @GeneratedValue
     private ThanhviennhomId id;
+
+    public ThanhviennhomId getId() {
+        return id;
+    }
+
+    public void setId(ThanhviennhomId id) {
+        this.id = id;
+    }
 }

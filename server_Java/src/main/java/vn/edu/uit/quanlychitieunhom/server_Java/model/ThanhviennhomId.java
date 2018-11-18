@@ -30,6 +30,15 @@ public class ThanhviennhomId implements Serializable {
         this.nhomchitieu = nhomchitieu;
     }
 
+    public ThanhviennhomId() {
+    }
+
+    public ThanhviennhomId(TAIKHOAN taikhoan, NHOMCHITIEU nhomchitieu) {
+
+        this.taikhoan = taikhoan;
+        this.nhomchitieu = nhomchitieu;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

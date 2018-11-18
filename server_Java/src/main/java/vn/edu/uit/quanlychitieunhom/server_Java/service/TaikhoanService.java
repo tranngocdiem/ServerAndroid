@@ -5,8 +5,11 @@ import org.springframework.stereotype.Service;
 import vn.edu.uit.quanlychitieunhom.server_Java.model.TAIKHOAN;
 import vn.edu.uit.quanlychitieunhom.server_Java.repository.TaikhoanRepository;
 
+import java.util.Optional;
+
 @Service
 public class TaikhoanService {
+
     @Autowired
     TaikhoanRepository taikhoanRepository;
 
@@ -15,11 +18,23 @@ public class TaikhoanService {
         return taikhoanRepository.findTaikhoanByTentaikhoan(tentaikhoan);
     }
 
-    /*public TAIKHOAN updateTaikhoanNoPass(String tentaikhoan, String tennguoidung, Number sodienthoai, String gioitinh, Date ngaysinh)
+    public TAIKHOAN updateTaikhoan (TAIKHOAN taikhoan, String tentaikhoan)
     {
-        taikhoanRepository.updateTaikhoanNoPass(tentaikhoan,tennguoidung,sodienthoai,gioitinh,ngaysinh);
-        return getTaikhoanByTentaikhoan(tentaikhoan);
-    }*/
+        Optional<TAIKHOAN> studentOptional = taikhoanRepository.findById(tentaikhoan);
+
+        if (!studentOptional.isPresent())
+            return null;
+
+        taikhoan.setTentaikhoan(tentaikhoan);
+        return taikhoanRepository.save(taikhoan);
+    }
+
+    public TAIKHOAN createTaikhoan (TAIKHOAN taikhoan){return taikhoanRepository.save(taikhoan);}
+
+    public void deleteTaikhoan(String tentaikhoan)
+    {
+        taikhoanRepository.deleteById(tentaikhoan);
+    }
 
 
 }
